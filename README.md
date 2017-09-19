@@ -1,10 +1,29 @@
 # Administrative-divisions-of-China
-
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Deps](https://david-dm.org/modood/Administrative-divisions-of-China.svg)](https://david-dm.org/modood/Administrative-divisions-of-China)
 [![npm](https://img.shields.io/npm/v/china-division.svg)](https://www.npmjs.com/package/china-division)
 [![npm](https://img.shields.io/npm/dt/china-division.svg)](https://www.npmjs.com/package/china-division)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/modood/Administrative-divisions-of-China/master/LICENSE)
+
+# 添加了angular框架[NG-ZORRO](https://github.com/NG-ZORRO/ng-zorro-antd)的Cascader级联选择的支持。
+## 文件在dist/angular.ts
+## 如何使用
+
+```
+// component.ts
+import { GEOGRAPHY } from '../shared/data/geography';
+geography = GEOGRAPHY;
+// html
+<nz-cascader
+  [class.class123]="true"
+  [nzOptions]="geography"
+  [(ngModel)]="_value"
+  (ngModelChange)="_console($event)"
+  (nzChange)="_console($event)">
+</nz-cascader>
+```
+## 对照表
+文件在dist/map.txt，是一个数组，当层级选择器输出[37,75,81],引入map.txt后，arr[37]就是层级选择器第一层输出。
 
 中华人民共和国行政区划：省份、城市、区县、乡镇（街道）
 
